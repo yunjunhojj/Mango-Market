@@ -249,6 +249,7 @@ const CommentEditInput = styled.TextInput`
     }
   }};
   padding: 10px;
+  color: ${(props) => props.theme.title};
 `;
 
 const CommentText = styled.Text`

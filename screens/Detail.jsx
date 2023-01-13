@@ -149,7 +149,13 @@ const Detail = (props) => {
                 </TitleBox>
                 <MarginBox />
                 <TitleBox>
-                  <PriceText> {detailItem?.price} 원 </PriceText>
+                  <PriceText>
+                    {" "}
+                    {detailItem?.price
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                    원{" "}
+                  </PriceText>
                 </TitleBox>
                 <GroupBox>
                   <DateText>{dateString(detailItem?.date)}</DateText>
